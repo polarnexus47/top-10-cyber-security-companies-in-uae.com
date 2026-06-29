@@ -1,0 +1,8 @@
+<svg width="220" height="36" viewBox="0 0 220 36" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0, 2)">
+    <path d="M16 0L2 5.5v8c0 7.5 5.8 14.3 14 16.5 8.2-2.2 14-9 14-16.5v-8L16 0z" fill="#9fef00"/>
+    <path d="M10.5 15.5l3.5 3.5 7-7" stroke="#0d1e0d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="42" y="15" font-family="'Space Grotesk','Inter',system-ui,sans-serif" font-weight="600" font-size="13" fill="#ffffff" letter-spacing="-0.3">UAE Cyber Rankings</text>
+  <text x="42" y="28" font-family="'Inter',system-ui,sans-serif" font-weight="400" font-size="10" fill="#9fef00" letter-spacing="1">INDEPENDENT RESEARCH</text>
+</svg>

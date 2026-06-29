@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://top-10-cyber-security-companies-in-uae.com/sitemap.xml
