@@ -187,6 +187,7 @@ build_page() {
     echo "<head>"
     echo "<meta charset=\"UTF-8\">"
     echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+    cat "$COMPONENTS/gtag.html"
     echo "<title>${TITLE}</title>"
     echo "<meta name=\"description\" content=\"${DESC}\">"
     echo "<link rel=\"canonical\" href=\"${CANONICAL}\">"
