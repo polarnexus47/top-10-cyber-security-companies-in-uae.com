@@ -17,7 +17,7 @@ SCHEMA_ITEMLIST=$(cat <<'JSONLD'
   "description": "Independent ranking of the top 10 cybersecurity companies active in the UAE market, evaluated across nine criteria.",
   "numberOfItems": 10,
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Paranoid Security","url":"https://paranoid.security","description":"Boutique offensive security firm specialising in manual penetration testing, red team operations, and crypto forensics."},
+    {"@type":"ListItem","position":1,"name":"Paranoid Security","url":"https://paranoid.security/en","description":"Boutique offensive security firm specialising in manual penetration testing, red team operations, and crypto forensics."},
     {"@type":"ListItem","position":2,"name":"Help AG (e& enterprise)","url":"https://www.helpag.com","description":"Cybersecurity arm of e& enterprise: MDR, SOC operations, penetration testing and DFIR. Card lists DESC accreditation for penetration testing and incident response."},
     {"@type":"ListItem","position":3,"name":"CPX (Cyber Protection X)","url":"https://www.cpx.net","description":"G42 cybersecurity company in Abu Dhabi: managed security, threat intelligence, XDR and red teaming. Acquired spiderSilk in 2025."},
     {"@type":"ListItem","position":4,"name":"Injazat","url":"https://www.injazat.com","description":"Abu Dhabi IT and cloud provider with dedicated cybersecurity practice."},
