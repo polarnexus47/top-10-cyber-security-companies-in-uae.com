@@ -6,6 +6,8 @@ COMPONENTS="components"
 CONTENT="content"
 TMP=$(mktemp -d)
 DOMAIN="https://top-10-cyber-security-companies-in-uae.com"
+# Cache-busting: GitHub Pages/Cloudflare serve CSS with a 4h max-age, so link it with a content hash
+ASSET_V=$(cat css/*.css js/*.js | shasum | cut -c1-8)
 
 # ── Schema blocks ─────────────────────────────────────────────────────────────
 SCHEMA_ITEMLIST=$(cat <<'JSONLD'
@@ -226,8 +228,8 @@ build_page() {
     echo "<meta name=\"twitter:title\" content=\"${OG_TITLE}\">"
     echo "<meta name=\"twitter:description\" content=\"${OG_DESC}\">"
     echo "<link rel=\"hreflang\" hreflang=\"en\" href=\"${CANONICAL}\">"
-    echo "<link rel=\"stylesheet\" href=\"${BASE}css/global.css\">"
-    echo "<link rel=\"stylesheet\" href=\"${BASE}css/ranking.css\">"
+    echo "<link rel=\"stylesheet\" href=\"${BASE}css/global.css?v=${ASSET_V}\">"
+    echo "<link rel=\"stylesheet\" href=\"${BASE}css/ranking.css?v=${ASSET_V}\">"
     if [ -n "$EXTRA_SCHEMA" ]; then
       echo "$EXTRA_SCHEMA"
     fi
