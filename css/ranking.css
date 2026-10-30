@@ -11,6 +11,17 @@
 
   /* Dark green base */
   background-color: var(--bg-primary);
+
+  /* Photo under layered gradients: vignette, fade into the page, green multiply tone */
+  background-image:
+    radial-gradient(ellipse at 50% 38%, rgba(8,20,8,.88) 0%, rgba(8,20,8,.64) 52%, rgba(8,20,8,.34) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(11,26,11,.25) 50%, var(--bg-primary) 100%),
+    linear-gradient(#2e8a47, #2e8a47),
+    url('../images/hero-code.webp');
+  background-blend-mode: normal, normal, multiply, normal;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Large atmospheric orbs — HTB signature */
@@ -790,6 +801,52 @@ details.faq-item .faq-body p:last-child { margin-bottom: 0; }
 .content-prose .faq-list { margin: 1rem 0 1.5rem; }
 .content-prose .sources { font-size: .8125rem; color: var(--text-faint); margin-top: 1.5rem; }
 .content-prose .related-guides { font-size: .875rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border-card); }
+
+/* ── Guide figure ────────────────────────────────────────── */
+.guide-figure { margin: 2rem 0 2.5rem; }
+
+.guide-figure__frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: 0 18px 40px -22px rgba(0,0,0,.7), 0 0 0 1px rgba(159,239,0,.04);
+}
+
+.guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* colour treatment layer + bottom fade */
+.guide-figure__frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #2e8a47;
+  mix-blend-mode: multiply;
+  opacity: .5;
+  pointer-events: none;
+}
+
+.guide-figure__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(6,16,6,.68) 0%, rgba(6,16,6,0) 55%);
+  pointer-events: none;
+}
+
+.guide-figure figcaption { margin-top: .625rem; font-size: .75rem; line-height: 1.6; color: var(--text-faint); }
+.guide-figure figcaption a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+.guide-figure figcaption a:hover { color: var(--green); opacity: 1; }
 
 /* ── Contact ─────────────────────────────────────────────── */
 .contact-grid { display: grid; gap: 1rem; margin-top: 2rem; }
