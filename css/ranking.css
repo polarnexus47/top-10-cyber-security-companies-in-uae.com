@@ -113,6 +113,17 @@
   line-height: 1.8;
 }
 
+.hero-links { font-size: .9375rem; margin-bottom: 0; }
+.hero-links a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.hero-links a:hover { opacity: .8; }
+
+.changelog {
+  max-width: 720px;
+  margin: 1.75rem auto 0;
+  text-align: left;
+  font-size: .875rem;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
@@ -475,6 +486,7 @@
 
 .compliance-card:hover { border-color: var(--border-bright); }
 
+.compliance-card h3,
 .compliance-card h4 {
   font-size: .8125rem;
   font-weight: 700;
@@ -483,6 +495,9 @@
   color: var(--green);
   margin-bottom: .5rem;
 }
+
+.compliance-card--wide { grid-column: 1 / -1; }
+.compliance-card--wide p + p { margin-top: .75rem; }
 
 .compliance-card p { font-size: .8625rem; color: var(--text-muted); margin: 0; line-height: 1.65; }
 
@@ -762,6 +777,20 @@ details.faq-item .faq-body p:last-child { margin-bottom: 0; }
 
 .content-prose li { color: var(--text-muted); font-size: .9375rem; line-height: 1.75; }
 
+/* ── Tables inside text pages ────────────────────────────── */
+.comparison-wrap + .compliance-grid { margin-top: 1.5rem; }
+.content-prose .comparison-wrap { margin: 1.25rem 0 1.75rem; }
+
+.prose-table { min-width: 620px; }
+.prose-table th:first-child,
+.prose-table td:first-child { width: auto; min-width: 0; text-align: left; }
+.prose-table td { vertical-align: top; line-height: 1.6; }
+.prose-table td a { color: var(--green); }
+
+.content-prose .faq-list { margin: 1rem 0 1.5rem; }
+.content-prose .sources { font-size: .8125rem; color: var(--text-faint); margin-top: 1.5rem; }
+.content-prose .related-guides { font-size: .875rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border-card); }
+
 /* ── Contact ─────────────────────────────────────────────── */
 .contact-grid { display: grid; gap: 1rem; margin-top: 2rem; }
 
@@ -827,7 +856,7 @@ details.faq-item .faq-body p:last-child { margin-bottom: 0; }
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (min-width: 640px) {
-  .hero-stats        { grid-template-columns: repeat(4, 1fr); max-width: 100%; }
+  .hero-stats        { grid-template-columns: repeat(3, 1fr); max-width: 100%; }
   .compliance-grid   { grid-template-columns: repeat(2, 1fr); }
   .buyer-grid        { grid-template-columns: repeat(2, 1fr); }
   .methodology-grid  { grid-template-columns: repeat(2, 1fr); }

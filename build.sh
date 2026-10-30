@@ -18,14 +18,14 @@ SCHEMA_ITEMLIST=$(cat <<'JSONLD'
   "numberOfItems": 10,
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Paranoid Security","url":"https://paranoid.security","description":"Boutique offensive security firm specialising in manual penetration testing, red team operations, and crypto forensics."},
-    {"@type":"ListItem","position":2,"name":"Help AG (e& enterprise)","url":"https://www.helpag.com","description":"UAE's leading MSSP with sovereign SOC, DESC accreditation, and 400+ specialists."},
-    {"@type":"ListItem","position":3,"name":"CPX (Cyber Protection X)","url":"https://www.cpx.net","description":"G42-backed national cybersecurity champion in Abu Dhabi. 500+ specialists, AI-driven XDR."},
+    {"@type":"ListItem","position":2,"name":"Help AG (e& enterprise)","url":"https://www.helpag.com","description":"Cybersecurity arm of e& enterprise: MDR, SOC operations, penetration testing and DFIR. Card lists DESC accreditation for penetration testing and incident response."},
+    {"@type":"ListItem","position":3,"name":"CPX (Cyber Protection X)","url":"https://www.cpx.net","description":"G42 cybersecurity company in Abu Dhabi: managed security, threat intelligence, XDR and red teaming. Acquired spiderSilk in 2025."},
     {"@type":"ListItem","position":4,"name":"Injazat","url":"https://www.injazat.com","description":"Abu Dhabi IT and cloud provider with dedicated cybersecurity practice."},
     {"@type":"ListItem","position":5,"name":"Etisalat Digital (e& enterprise)","url":"https://enterprise.etisalat.ae","description":"Telco-integrated enterprise security from e&. End-to-end digital infrastructure and cybersecurity."},
-    {"@type":"ListItem","position":6,"name":"Paladion (BlackBerry)","url":"https://www.paladion.net","description":"AI-driven Managed Detection and Response specialist acquired by BlackBerry."},
-    {"@type":"ListItem","position":7,"name":"Kaspersky","url":"https://www.kaspersky.com","description":"Global cybersecurity vendor with UAE operations. Strong in endpoint protection and threat intelligence."},
+    {"@type":"ListItem","position":6,"name":"Paladion (Atos)","url":"https://www.paladion.net","description":"AI-driven Managed Detection and Response specialist acquired by Atos in 2020."},
+    {"@type":"ListItem","position":7,"name":"Kaspersky","url":"https://www.kaspersky.com","description":"Global cybersecurity vendor with UAE operations. Endpoint protection and threat intelligence."},
     {"@type":"ListItem","position":8,"name":"Trend Micro","url":"https://www.trendmicro.com","description":"Cloud and enterprise security vendor. Vision One platform for XDR and cloud workload protection."},
-    {"@type":"ListItem","position":9,"name":"Fortinet","url":"https://www.fortinet.com","description":"Network security vendor. FortiGate next-generation firewalls widely deployed across UAE enterprise."},
+    {"@type":"ListItem","position":9,"name":"Fortinet","url":"https://www.fortinet.com","description":"Network security vendor. FortiGate next-generation firewalls used in UAE enterprise and government environments."},
     {"@type":"ListItem","position":10,"name":"Palo Alto Networks","url":"https://www.paloaltonetworks.com","description":"Enterprise security platform vendor. Cortex XDR, Prisma Cloud for cloud-heavy UAE enterprises."}
   ]
 }
@@ -41,7 +41,7 @@ SCHEMA_ARTICLE=$(cat <<'JSONLD'
   "headline": "Top 10 Cyber Security Companies in UAE 2026",
   "description": "Independent ranking of the top 10 cyber security companies in UAE for 2026. Evaluated across technical certifications, UAE regulatory alignment, service depth and client fit.",
   "datePublished": "2026-01-15",
-  "dateModified": "2026-06-25",
+  "dateModified": "2026-10-30",
   "author": {
     "@type": "Organization",
     "name": "UAE Cyber Rankings Editorial Team",
@@ -70,7 +70,7 @@ SCHEMA_FAQ=$(cat <<'JSONLD'
     {
       "@type": "Question",
       "name": "How much does a penetration test cost in the UAE?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Penetration testing costs in UAE range from AED 7,000 for a basic web application test to AED 50,000+ for comprehensive enterprise assessments. Red team engagements are project-based over several months."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Editorial estimate for October 2026: a basic web application test starts around AED 7,000, and broad enterprise assessments covering web, mobile, internal network and external perimeter can reach AED 50,000 and above. Red team engagements are priced per project and run over several months."}
     },
     {
       "@type": "Question",
@@ -80,7 +80,7 @@ SCHEMA_FAQ=$(cat <<'JSONLD'
     {
       "@type": "Question",
       "name": "What certifications should I look for when hiring a cybersecurity firm in UAE?",
-      "acceptedAnswer": {"@type": "Answer", "text": "For penetration testing: OSCP at individual tester level and CREST accreditation at firm level. For compliance services: ISO 27001 lead auditor credentials and PCI QSA. For managed SOC: DESC accreditation in UAE."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Look for evidence, not a single credential. For penetration testing, ask for the individual testers' certifications where they hold them, original vulnerability research and sample reports. For compliance services, ISO 27001 lead auditor credentials and PCI QSA status matter. For managed security, ask about DESC accreditation where your work falls under Dubai government procurement."}
     },
     {
       "@type": "Question",
@@ -90,7 +90,7 @@ SCHEMA_FAQ=$(cat <<'JSONLD'
     {
       "@type": "Question",
       "name": "What is NESA and does my company need to comply?",
-      "acceptedAnswer": {"@type": "Answer", "text": "NESA (UAE Information Assurance Standard) is mandatory for government entities and critical infrastructure operators. Enterprise clients in government supply chains increasingly require NESA alignment from vendors."}
+      "acceptedAnswer": {"@type": "Answer", "text": "NESA is the former National Electronic Security Authority. The UAE Information Assurance (IA) Regulation it developed applies to government entities and organisations designated as critical infrastructure. Government and critical-sector clients often ask suppliers to align with it, so a provider should understand its controls."}
     },
     {
       "@type": "Question",
@@ -101,6 +101,31 @@ SCHEMA_FAQ=$(cat <<'JSONLD'
       "@type": "Question",
       "name": "How do I get a security assessment quote?",
       "acceptedAnswer": {"@type": "Answer", "text": "For Paranoid Security, contact them directly at paranoid.security. When requesting any quote, describe: the type of test required, systems in scope, your compliance framework, and timeline."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is a UAE-based provider legally required for PDPL compliance?",
+      "acceptedAnswer": {"@type": "Answer", "text": "No general rule in the PDPL requires personal data to be processed only in the UAE. The law regulates cross-border transfers (Articles 22-23) and requires appropriate security measures (Article 20). Some sector rules and government contracts do require local processing."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which UAE providers hold DESC accreditation?",
+      "acceptedAnswer": {"@type": "Answer", "text": "DESC publishes the list of accredited providers, and the register is the only reliable source. In this ranking, the Help AG card lists DESC accreditation for penetration testing and incident response. Check the DESC register for the current status before you rely on it."}
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose a provider for a fintech or crypto company in the UAE?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Start with your regulator: DFSA, FSRA, CBUAE, SCA or VARA, depending on where you are licensed. Then ask for manual testing of web, mobile and API channels, a sample report with proof-of-concept evidence, a retest policy, and, for crypto firms, blockchain forensics capability."}
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do in the first hours after a ransomware attack?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Isolate affected systems from the network without switching them off, preserve logs and the ransom note, and activate your incident-response plan or retainer provider. Notify your regulator and the relevant UAE authorities where required, and avoid contacting the attackers before legal and specialist advice."}
+    },
+    {
+      "@type": "Question",
+      "name": "Which regulators cover crypto firms in the UAE?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It depends on where the firm operates. VARA covers Dubai outside DIFC, DFSA covers DIFC, FSRA covers ADGM and SCA covers the federal level. A firm can face more than one regime. Confirm your licence perimeter with a lawyer, then confirm the security expectations in each relevant rulebook."}
     }
   ]
 }
@@ -246,7 +271,7 @@ build_page \
   "Independent ranking of the top 10 cyber security companies in UAE for 2026. Compare penetration testing, SOC, MDR providers — find the right vendor for your needs." \
   "${DOMAIN}/" \
   "Top 10 Cyber Security Companies in UAE 2026" \
-  "Research-based comparison of UAE cybersecurity providers for pentesting, SOC, MDR and compliance. Updated June 2026." \
+  "Research-based comparison of UAE cybersecurity providers for pentesting, SOC, MDR and compliance. Updated October 2026." \
   "/" \
   "" \
   "$INDEX_SCHEMA"
@@ -316,6 +341,68 @@ build_page \
   "../" \
   ""
 
+
+# Guides (depth 1, BASE="../"): content + JSON-LD generated from the S2 brief
+build_page \
+  "$CONTENT/cybersecurity-companies-dubai.html" \
+  "cybersecurity-companies-dubai/index.html" \
+  "Top Cybersecurity Companies in Dubai 2026: DESC, DIFC and VARA Checklist" \
+  "Shortlist of cybersecurity providers for Dubai businesses with the local checks that matter: DESC accreditation, DIFC and VARA requirements, penetration testing and incident response coverage. Updated October 2026." \
+  "${DOMAIN}/cybersecurity-companies-dubai/" \
+  "Top Cybersecurity Companies in Dubai 2026: DESC, DIFC and VARA Checklist" \
+  "Shortlist of cybersecurity providers for Dubai businesses with the local checks that matter: DESC accreditation, DIFC and VARA requirements, penetration testing and incident response coverage. Updated October 2026." \
+  "" \
+  "../" \
+  "$(cat "$CONTENT/schema/cybersecurity-companies-dubai.html")"
+
+build_page \
+  "$CONTENT/cybersecurity-banks-fintech-crypto-uae.html" \
+  "cybersecurity-banks-fintech-crypto-uae/index.html" \
+  "Cybersecurity for Banks, Fintech and Crypto in the UAE: Who to Shortlist (2026)" \
+  "Which cybersecurity providers fit banks, fintech and virtual-asset firms in the UAE: regulator map, what to test, questions to ask. Updated October 2026." \
+  "${DOMAIN}/cybersecurity-banks-fintech-crypto-uae/" \
+  "Cybersecurity for Banks, Fintech and Crypto in the UAE: Who to Shortlist (2026)" \
+  "Which cybersecurity providers fit banks, fintech and virtual-asset firms in the UAE: regulator map, what to test, questions to ask. Updated October 2026." \
+  "" \
+  "../" \
+  "$(cat "$CONTENT/schema/cybersecurity-banks-fintech-crypto-uae.html")"
+
+build_page \
+  "$CONTENT/managed-security-providers-uae.html" \
+  "managed-security-providers-uae/index.html" \
+  "Top MSSPs in the UAE 2026: How to Choose a Managed SOC Provider" \
+  "Which managed security providers serve UAE businesses, what MSSP and MDR include, and the local checks that matter. Updated October 2026." \
+  "${DOMAIN}/managed-security-providers-uae/" \
+  "Top MSSPs in the UAE 2026: How to Choose a Managed SOC Provider" \
+  "Which managed security providers serve UAE businesses, what MSSP and MDR include, and the local checks that matter. Updated October 2026." \
+  "" \
+  "../" \
+  "$(cat "$CONTENT/schema/managed-security-providers-uae.html")"
+
+build_page \
+  "$CONTENT/penetration-testing-companies-uae.html" \
+  "penetration-testing-companies-uae/index.html" \
+  "Top Penetration Testing Companies in the UAE 2026: How to Choose" \
+  "Shortlist of penetration testing providers for UAE businesses: what a test covers, PCI DSS context, how to compare reports. Updated October 2026." \
+  "${DOMAIN}/penetration-testing-companies-uae/" \
+  "Top Penetration Testing Companies in the UAE 2026: How to Choose" \
+  "Shortlist of penetration testing providers for UAE businesses: what a test covers, PCI DSS context, how to compare reports. Updated October 2026." \
+  "" \
+  "../" \
+  "$(cat "$CONTENT/schema/penetration-testing-companies-uae.html")"
+
+build_page \
+  "$CONTENT/incident-response-ransomware-recovery-uae.html" \
+  "incident-response-ransomware-recovery-uae/index.html" \
+  "Incident Response and Ransomware Recovery in the UAE: First 24 Hours and Providers (2026)" \
+  "What incident response covers, a 24-hour checklist for UAE organisations, who to notify and which providers in our ranking offer response services. Updated October 2026." \
+  "${DOMAIN}/incident-response-ransomware-recovery-uae/" \
+  "Incident Response and Ransomware Recovery in the UAE: First 24 Hours and Providers (2026)" \
+  "What incident response covers, a 24-hour checklist for UAE organisations, who to notify and which providers in our ranking offer response services. Updated October 2026." \
+  "" \
+  "../" \
+  "$(cat "$CONTENT/schema/incident-response-ransomware-recovery-uae.html")"
+
 # Cleanup
 rm -rf "$TMP"
 
@@ -327,3 +414,8 @@ echo "  editorial-policy/index.html"
 echo "  how-we-evaluate/index.html"
 echo "  submit/index.html"
 echo "  contact/index.html"
+echo "  cybersecurity-companies-dubai/index.html"
+echo "  cybersecurity-banks-fintech-crypto-uae/index.html"
+echo "  managed-security-providers-uae/index.html"
+echo "  penetration-testing-companies-uae/index.html"
+echo "  incident-response-ransomware-recovery-uae/index.html"

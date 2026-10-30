@@ -296,7 +296,7 @@ li { margin-bottom: .4rem; }
     gap: 1.5rem;
   }
 
-  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: repeat(4, 1fr); }
 
   .footer-bottom {
     flex-direction: row;
